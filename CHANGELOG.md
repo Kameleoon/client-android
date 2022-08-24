@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.1 - 2022-08-24
+* Added method to obtain all variables for feature flag: [`obtainFeatureAllVariables`](https://developers.kameleoon.com/android-sdk.html#obtainfeatureallvariables)
+* Added method to obtain a list of feature flags: [`obtainFeatureList`](https://developers.kameleoon.com/android-sdk.html#obtainfeaturelist)
+* Added method to obtain a list of feature flags targeted for specified visitor code: [`obtainFeatureListForVisitorCode`](https://developers.kameleoon.com/android-sdk.html#obtainfeaturelistforvisitorcode)
+* Added method to obtain a list of experiments: [`obtainExperimentList`](https://developers.kameleoon.com/android-sdk.html#obtainexperimentlist)
+* Added method to obtain a list of experiments targeted for specified visitor code: [`obtainExperimentListForVisitorCode`](https://developers.kameleoon.com/android-sdk.html#obtainexperimentlistforvisitorcode)
+* Added support for **Experiment** & **Exclusive Campaign** conditions. Related to [`triggerExperiment`](https://developers.kameleoon.com/android-sdk.html#triggerexperiment)
+* Added KameleoonData [`Device`](https://developers.kameleoon.com/android-sdk.html#device) data. Possible values are: **PHONE**, **TABLET**, **DESKTOP**.
+* Removed KameleoonData `Interest`
+* Added support of `is among the values` operator for Custom Data
+
 ## 2.1.0 - 2022-05-13
 * Added a new method [`updateConfigurationHandler`](https://developers.kameleoon.com/android-sdk.html#updateconfigurationhandler) to handle events when configuration has updated data in real time.
 * Added update campaigns and feature flag configurations instantaneously with Real-Time Streaming Architecture: [`documentation`](https://developers.kameleoon.com/android-sdk.html#streaming) or [`product updates`](https://www.kameleoon.com/en/blog/real-time-streaming)
