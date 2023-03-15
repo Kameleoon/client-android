@@ -3,23 +3,23 @@ All notable changes to this project will be documented in this file.
 
 ## 3.0.0 - 2023-02-17
 * Added support of new feature flag rules:
-    - [`getFeatureVariationKey`](https://developers.kameleoon.com/java-sdk.html#getFeatureVariationKey)
-    - `obtainFeatureVariable` -> [`getFeatureVariable`](https://developers.kameleoon.com/java-sdk.html#getFeatureVariable)
-    - [`getFeatureAllVariables`](https://developers.kameleoon.com/java-sdk.html#getFeatureAllVariables)
-    - `activateFeature` -> [`isFeatureActive`](https://developers.kameleoon.com/java-sdk.html#isFeatureActive)
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/android-sdk.html#getFeatureVariationKey)
+    - `obtainFeatureVariable` -> [`getFeatureVariable`](https://developers.kameleoon.com/android-sdk.html#getFeatureVariable)
+    - [`getFeatureAllVariables`](https://developers.kameleoon.com/android-sdk.html#getFeatureAllVariables)
+    - `activateFeature` -> [`isFeatureActive`](https://developers.kameleoon.com/android-sdk.html#isFeatureActive)
 * Renaming of methods (old methods warn you on using and will be removed later)
-    - `obtainVisitorCode` -> [`getVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getVisitorCode)
-    - `obtainVariationAssociatedData` -> [`getVariationAssociatedData`](https://developers.kameleoon.com/java-sdk.html#getVariationAssociatedData),
-    - `obtainFeatureAllVariables` -> [`getFeatureAllVariables`](https://developers.kameleoon.com/java-sdk.html#getFeatureAllVariables),
-    - `obtainExperimentList` -> [`getExperimentList`](https://developers.kameleoon.com/java-sdk.html#getExperimentList)
-    - `obtainExperimentListForVisitorCode` -> [`getExperimentListForVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getExperimentListForVisitorCode)
-    - `obtainFeatureList` -> [`getFeatureList`](https://developers.kameleoon.com/java-sdk.html#getFeatureList)
-    - `obtainFeatureListListForVisitorCode` -> [`getActiveFeatureListForVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getActiveFeatureListForVisitorCode)
+    - `obtainVisitorCode` -> [`getVisitorCode`](https://developers.kameleoon.com/android-sdk.html#getVisitorCode)
+    - `obtainVariationAssociatedData` -> [`getVariationAssociatedData`](https://developers.kameleoon.com/android-sdk.html#getVariationAssociatedData),
+    - `obtainFeatureAllVariables` -> [`getFeatureAllVariables`](https://developers.kameleoon.com/android-sdk.html#getFeatureAllVariables),
+    - `obtainExperimentList` -> [`getExperimentList`](https://developers.kameleoon.com/android-sdk.html#getExperimentList)
+    - `obtainExperimentListForVisitorCode` -> [`getExperimentListForVisitorCode`](https://developers.kameleoon.com/android-sdk.html#getExperimentListForVisitorCode)
+    - `obtainFeatureList` -> [`getFeatureList`](https://developers.kameleoon.com/android-sdk.html#getFeatureList)
+    - `obtainFeatureListListForVisitorCode` -> [`getActiveFeatureListForVisitorCode`](https://developers.kameleoon.com/android-sdk.html#getActiveFeatureListForVisitorCode)
 * Renaming of exceptions:
     - `NotActivated` -> `NotAllocated`
 * Changes in Kameleoon Data:
-    - Added possibility to set [`UserAgent`](https://developers.kameleoon.com/java-sdk.html#useragent).
-* Added **KameleoonConfiguration**, it can be used as parameter during initialization of a client. Related to [`KameleoonClientFactory.create`](https://developers.kameleoon.com/java-sdk.html#com-kameleoon-kameleoonclientfactory)
+    - Added possibility to set [`UserAgent`](https://developers.kameleoon.com/android-sdk.html#useragent).
+* Added **KameleoonConfiguration**, it can be used as parameter during initialization of a client. Related to [`KameleoonClientFactory.create`](https://developers.kameleoon.com/android-sdk.html#com-kameleoon-kameleoonclientfactory)
 
 ## 2.1.1 - 2022-08-24
 * Added method to obtain all variables for feature flag: [`obtainFeatureAllVariables`](https://developers.kameleoon.com/android-sdk.html#obtainfeatureallvariables)
@@ -49,7 +49,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2.0.10 - 2021-10-25
 * Added scheduling functionality for [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature)
-* Fixed wrong bucketing on respool time. Related to [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature) and [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)  
+* Fixed wrong bucketing on respool time. Related to [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature) and [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
 
 ## 2.0.9
 * obtainFeatureVariable support JSONArray as returning value
