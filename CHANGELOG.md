@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2023-05-02
+* Added possibility for [`CustomData`](https://developers.kameleoon.com/android-sdk.html#customdata) to use variable argument list of values
+* Renaming of method:
+      - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData)
+* Removed `UserAgent` data type
+
 ## 3.0.0 - 2023-02-17
 * Added support of new feature flag rules:
     - [`getFeatureVariationKey`](https://developers.kameleoon.com/android-sdk.html#getFeatureVariationKey)
