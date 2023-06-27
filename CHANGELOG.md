@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.1 - 2023-06-27
+* The minimum supported Android version for the SDK has been designated as API level 14. This implies that the SDK is compatible with devices running Android 4.0 (Ice Cream Sandwich) and above. By setting the minimum supported version to API level 14, the SDK ensures compatibility with a wide range of Android devices, allowing developers to target a significant portion of the Android user base.
+
 ## 3.1.0 - 2023-05-02
 * Added possibility for [`CustomData`](https://developers.kameleoon.com/android-sdk.html#customdata) to use variable argument list of values
 * Renaming of method:
