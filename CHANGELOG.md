@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.2 - 2023-07-04
+* Improved the handling of internet connection loss for the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming): We have resolved a critical issue related to the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming). Previously, when the user’s device lost internet connection, the SDK was unable to receive configuration data until the next application launch. With this update, the SDK can now successfully retrieve the required configuration data once the connection is restored without restarting the application.\
+\
+The user must grant your application the `android.permission.ACCESS_NETWORK_STATE` permission for the SDK to determine when the network becomes accessible again. If the permission is not granted, the SDK uses [Polling Mode](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#polling) instead.
+
+
 ## 3.1.1 - 2023-06-27
 * The minimum supported Android version for the SDK has been designated as API level 14. This implies that the SDK is compatible with devices running Android 4.0 (Ice Cream Sandwich) and above. By setting the minimum supported version to API level 14, the SDK ensures compatibility with a wide range of Android devices, allowing developers to target a significant portion of the Android user base.
 
