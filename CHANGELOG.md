@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.3 - 2023-07-11
+* Added new conditions for targeting:
+    - Visitor Code
+    - SDK Language
+    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/go-sdk/#device)
+    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/go-sdk/#trackconversion)
+
 ## 3.1.2 - 2023-07-04
 * Improved the handling of internet connection loss for the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming): We have resolved a critical issue related to the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming). Previously, when the user’s device lost internet connection, the SDK was unable to receive configuration data until the next application launch. With this update, the SDK can now successfully retrieve the required configuration data once the connection is restored without restarting the application.\
 \
