@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.0 - 2023-08-21
+### Features
+* Added [`getRemoteVisitorData`](https://developers.kameleoon.com/android-sdk.html#getRemoteVisitorData) method to synchronize visitor data across devices by fetching remote data for a visitor (and optionally, add the fetched data to the visitor.)
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 3.1.3 - 2023-07-11
 * Added new conditions for targeting:
     - Visitor Code
