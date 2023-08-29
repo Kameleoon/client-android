@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.1 - 2023-08-29
+### Features
+* Changed the `KameleoonClientConfig` parameters `clientId` and `clientSecret` and the external configuration file parameters, `client_id` and `client_secret` from required to optional. This means you can now successfully initialize a configuration without providing credentials. Previously, you would receive a `CredentialsNotFound` exception.
+
 ## 3.2.0 - 2023-08-21
 ### Features
 * Added [`getRemoteVisitorData`](https://developers.kameleoon.com/android-sdk.html#getRemoteVisitorData) method to synchronize visitor data across devices by fetching remote data for a visitor (and optionally, add the fetched data to the visitor.)
