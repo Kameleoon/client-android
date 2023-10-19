@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 3.3.0 - 2023-10-19
 ### Features
-* Added [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/android-sdk.html#getvisitorwarehouseaudience) method that retrieves all data associated with a visitor's warehouse audiences and adds it to the visitor.
+* Added [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/android-sdk.html#getvisitorwarehouseaudience) method to retrieve all data associated with a visitor's warehouse audiences and adds it to the visitor.
 
 ## 3.2.1 - 2023-08-29
 ### Features
