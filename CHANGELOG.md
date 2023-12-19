@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.4.0 - 2023-12-19
+### Features
+* Added a new configuration parameter to [`KameleoonConfiguration`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#configure-additional-properties) file:
+    - `defaultTimeout` in `KameleoonConfiguration` and `default_timeout_millisecond` in the configuration file: designates the predefined timeout for network requests. The default timeout value is 10000 milliseconds.
+
 ## 3.3.0 - 2023-10-19
 ### Features
 * Added [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/android-sdk.html#getvisitorwarehouseaudience) method to retrieve all data associated with a visitor's warehouse audiences and adds it to the visitor.
