@@ -1,6 +1,84 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2024-02-08
+### Breaking Changes
+* Migrated to [`AndroidX`](https://developer.android.com/jetpack/androidx) library as support for the [`Support Library`](https://developer.android.com/topic/libraries/support-library) is deprecated.
+* Removed the `visitorCode` parameter from all methods that accepted it. You must now specify the visitor code during initialization. As a result, a `KameleoonClient` instance only works for a single visitor:
+  - [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#adddata)
+  - [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#flush)
+  - [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#isfeatureactive)
+  - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariationkey)
+  - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariable)
+  - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#trackconversion)
+  - [`getActiveFeatureList`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getactivefeaturelist)
+  - [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorwarehouseaudience)
+* Removed all deprecated methods and exceptions related to **experiments**:
+  - `triggerExperiment`
+  - `getVariationAssociatedData` (`obtainVariationAssociatedData`)
+  - `getExperimentList` (`obtainExperimentList`)
+  - `getExperimentListForVisitor` (`obtainExperimentListForVisitor`)
+  - `ExperimentConfigurationNotFound`
+  - `NotTargeted`
+  - `NotAllocated`
+  - `SiteCodeDisabled`
+* Removed additional methods that were deprecated in 3.x versions:
+  - `activateFeature`
+  - `obtainVisitorCode`
+  - `obtainFeatureVariable`
+  - `obtainFeatureAllVariables`
+  - `obtainFeatureList`
+  - `obtainFeatureListForVisitorCode`
+  - `retrieveDataFromRemoteSource`
+* Changed the following classes, methods, fields and exceptions:
+  * Classes:
+    - Renamed `KameleoonConfiguraton` to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
+    - Data classes were allocated into their own package `com.kameleoon.data`.
+    - Renamed static members of `Device` class: 
+        - `Device.PHONE` renamed to `Device.phone()`
+        - `Device.TABLET` renamed to `Device.tablet()`
+        - `Device.DESKTOP` renamed to `Device.desktop()`.
+    - [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#conversion) has additional constructors with optional `revenue` and `negative` values. Also, the types of these fields are changed to primitives.
+  * Interfaces:
+    - For the [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method, the interface `KameleoonReadyCallback` changed to `ResultCompletion<Boolean, TimeoutException>`.
+    - For the [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getremotedata) method, the interface `KameleoonDataCallback` changed to `ResultCompletion<JSONObject, Exception>`.
+    - For the [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getremotevisitordata) method, the interface `KameleoonVisitorDataCallback` changed to `ResultCompletion<List<Data>, Exception>`.
+    - For the [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorwarehouseaudience) method, the interface `KameleoonVisitorDataCallback` changed to `ResultCompletion<CustomData, Exception>`.
+    - For the [`onUpdateConfiguration`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#onupdateconfiguration) method, the interface `KameleoonUpdateConfigurationHandler` changed to `ResultCompletion<Long, Exception>`.
+  * Methods:
+    - Removed `getVisitorCode`.
+    - Renamed `getFeatureAllVariables` to [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariationvariables).
+    - Renamed `getVisitorWarehouseAudiences` to [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorwarehouseaudience).
+    - Renamed `getActiveFeatureListForVisitorCode` to [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getactivefeatures).
+    - Renamed `updateConfigurationHandler` to [`onUpdateConfiguration`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#onupdateconfiguration).
+    - Changed `revenue` argument to optional in the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#trackconversion) method. Also, the type of `revenue` was changed to `float`. 
+  * Fields:
+    - Renamed `configurationRefreshInterval` to `refreshIntervalMinute` in [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
+    - Renamed `defaultTimeout` to `defaultTimeoutMillisecond` in [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
+    - Renamed `actions_configuration_refresh_interval` to `refresh_interval_minute` in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#additional-configuration) file.
+    - Renamed `default_timeout` to `default_timeout_millisecond` in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#additional-configuration) file.
+    - Renamed `sitecode` to `siteCode` in [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create).
+  * Exceptions:
+    - Removed `CredentialsNotFound` (the `clientId` and `clientSecret` credentials are now optional).
+    - Renamed `VisitorCodeNotValid` to `VisitorCodeInvalid`.
+    - Renamed `FeatureConfigurationNotFound` to `FeatureNotFound`.
+    - Renamed `VariationConfigurationNotFound` to `FeatureVariationNotFound`.
+  * Added new exception [`SiteCodeIsEmpty`] for the method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) that indicates the provided `siteCode` is empty.
+  * Added new exception `FeatureEnvironmentDisabled` indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+      - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariationkey)
+      - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariable)
+      - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariationvariables)
+### Features
+* Added the [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#setlegalconsent) method to determine the types data that Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
+* [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) method accepts `visitorCode` as a parameter to use for all SDK methods. If you omit the `visitorCode`, the SDK generates a new visitor code value that it uses until you overwrite it. To overwrite a `visitorCode`, provide it as a parameter explicitly to the method. The method throws `VisitorCodeInvalid` if the provided `visitorCode` is invalid (empty or longer than 255 characters).
+* Added new configuration fields to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client) and external [configuration](https://developers.kameleoon.com/android-sdk.html#additional-configuration) file:
+    - `dataExpirationIntervalMinute` (`data_expiration_interval_minute`) specifies the time (in minutes) that the SDK retains the visitor's data on the device. By default, the TTL (time to live) is `Integer.MAX_VALUE`.
+* Changed the `key` parameter in the [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getremotedata) method from required to optional. If you don't provide a `key` parameter, the SDK uses the `visitorCode` specified during initialization.
+* Added the [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getactivefeatures) method, which retrieves information about the active feature flags that are available for a specific visitor code. This method replaces the deprecated `getActiveFeatureListForVisitorCode` method.
+
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 3.4.0 - 2023-12-19
 ### Features
 * Added a new configuration parameter to [`KameleoonConfiguration`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#configure-additional-properties) file:
