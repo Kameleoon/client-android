@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.1 - 2024-02-16
+### Features
+* Added support of different Data API servers over the world for even more quicker network requests.
+
 ## 4.0.0 - 2024-02-08
 ### Breaking Changes
 * Migrated to [`AndroidX`](https://developer.android.com/jetpack/androidx) library as support for the [`Support Library`](https://developer.android.com/topic/libraries/support-library) is deprecated.
