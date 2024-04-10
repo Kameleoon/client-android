@@ -38,7 +38,7 @@ All notable changes to this project will be documented in this file.
   * Classes:
     - Renamed `KameleoonConfiguraton` to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
     - Data classes were allocated into their own package `com.kameleoon.data`.
-    - Renamed static members of `Device` class: 
+    - Renamed static members of `Device` class:
         - `Device.PHONE` renamed to `Device.phone()`
         - `Device.TABLET` renamed to `Device.tablet()`
         - `Device.DESKTOP` renamed to `Device.desktop()`.
@@ -55,7 +55,7 @@ All notable changes to this project will be documented in this file.
     - Renamed `getVisitorWarehouseAudiences` to [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorwarehouseaudience).
     - Renamed `getActiveFeatureListForVisitorCode` to [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getactivefeatures).
     - Renamed `updateConfigurationHandler` to [`onUpdateConfiguration`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#onupdateconfiguration).
-    - Changed `revenue` argument to optional in the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#trackconversion) method. Also, the type of `revenue` was changed to `float`. 
+    - Changed `revenue` argument to optional in the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#trackconversion) method. Also, the type of `revenue` was changed to `float`.
   * Fields:
     - Renamed `configurationRefreshInterval` to `refreshIntervalMinute` in [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
     - Renamed `defaultTimeout` to `defaultTimeoutMillisecond` in [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#initialize-the-kameleoon-client).
@@ -82,6 +82,10 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 * Stability and performance improvements.
+
+## 3.4.1 - 2023-12-19
+### Bug Fixes
+* Resolved an issue where the [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) method could crash during initialization under specific conditions.
 
 ## 3.4.0 - 2023-12-19
 ### Features
