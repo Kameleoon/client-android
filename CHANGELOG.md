@@ -67,7 +67,7 @@ All notable changes to this project will be documented in this file.
     - Renamed `VisitorCodeNotValid` to `VisitorCodeInvalid`.
     - Renamed `FeatureConfigurationNotFound` to `FeatureNotFound`.
     - Renamed `VariationConfigurationNotFound` to `FeatureVariationNotFound`.
-  * Added new exception [`SiteCodeIsEmpty`] for the method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) that indicates the provided `siteCode` is empty.
+  * Added new exception `SiteCodeIsEmpty` for the method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) that indicates the provided `siteCode` is empty.
   * Added new exception `FeatureEnvironmentDisabled` indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
       - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariationkey)
       - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getfeaturevariable)
