@@ -1,6 +1,24 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.0 - 2024-05-22
+### Features
+* Added a new optional parameter `isUniqueIdentifier` (`is_unique_identifier`) that provides additional capabilities with [cross-device experimentation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation) for the [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) and external [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#configure-additional-properties) file.
+* Added new targeting conditions (some conditions require you to pre-load data with [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata))
+  - Operating System
+  - IP Geolocation
+  - Kameleoon Segment
+  - Target Feature Flag
+  - Time since First Visit
+  - Time since Last Visit
+  - Number of Visits Today
+  - Total Number of Visits
+  - New or Returning Visitor
+* Added new Kameleoon Data type:
+  - [`Geolocation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#geolocation)
+### Bug Fixes
+* Stability and performance improvements.
+
 ## 4.0.1 - 2024-02-16
 ### Features
 * Added support of different Data API servers over the world for even more quicker network requests.
