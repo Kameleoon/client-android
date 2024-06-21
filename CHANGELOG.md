@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.2.0 - 2024-06-21
 ### Features
-The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) with the `kcs` parameter set to `true`.
+* The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) with the `kcs` parameter set to `true`.
 
 ## 4.1.0 - 2024-05-22
 ### Features
