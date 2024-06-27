@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.2.1 - 2024-06-27
+### Bug Fixes
+* Resolved an issue where the [runWhenReady](https://developers.kameleon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method could throw a `ConcurrentModificationException` if both of the following conditions are met simultaneously:
+  - Intensive usage of the [runWhenReady](https://developers.kameleon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method in multiple threads.
+  - The user's device has an unstable network connection.
+
 ## 4.2.0 - 2024-06-21
 ### Features
 * The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) with the `kcs` parameter set to `true`.
