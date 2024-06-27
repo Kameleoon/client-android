@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ### Bug Fixes
 * Resolved an issue where the [runWhenReady](https://developers.kameleon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method could throw a `ConcurrentModificationException` if both of the following conditions are met simultaneously:
   - Intensive usage of the [runWhenReady](https://developers.kameleon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method in multiple threads.
-  - The user's device has an unstable network connection.
+  - Kameleoon infrastructure is in outage or the user device encounters some network connection issues.
 
 ## 4.2.0 - 2024-06-21
 ### Features
