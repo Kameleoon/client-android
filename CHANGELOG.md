@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.2.2 - 2024-08-13
+### Features
+* Added the [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorcode) method, which returns the unique visitor code used within `KameleoonClient`.
+
 ## 4.2.1 - 2024-06-27
 ### Bug Fixes
 * Resolved an issue where the [runWhenReady](https://developers.kameleon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#runwhenready) method could throw a `ConcurrentModificationException` if both of the following conditions are met simultaneously:
