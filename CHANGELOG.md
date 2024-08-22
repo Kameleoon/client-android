@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.2.3 - 2024-08-22
+### Bug Fixes
+* Fixed `NullPointerException` occurring when calling the [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) method before the SDK is initialized.
+
 ## 4.2.2 - 2024-08-13
 ### Features
 * Added the [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvisitorcode) method, which returns the unique visitor code used within `KameleoonClient`.
