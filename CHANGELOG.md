@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-09-05
+### Features
+* Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#logging):
+    - Introduced [log levels](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#log-levels):
+        - `NONE`
+        - `ERROR`
+        - `WARNING`
+        - `INFO`
+        - `DEBUG`
+    - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#custom-handling-of-logs) implementations.
+* Enhanced tracking to consolidate multiple requests into a single one, combining visitor information and sending it once per interval.
+* Added a new variation of the [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush) with `instant` parameter. If the parameter's value is `true` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with the next tracking interval. Default value of the parameter is `false`.
+* Added new configuration parameter `trackingIntervalMillisecond` (`tracking_interval_millisecond`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/java-sdk.html#initialize-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
+
 ## 4.2.3 - 2024-08-22
 ### Bug Fixes
 * Fixed `NullPointerException` occurring when calling the [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) method before the SDK is initialized.
