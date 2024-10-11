@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.4.0 - 2024-10-11
+### Features
+* Introduced new evaluation methods for clarity and improved efficiency when working with the SDK:
+  - [`getVariation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvariation)
+  - [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvariations)
+* These methods replace the deprecated ones:
+  - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getfeaturevariationkey)
+  - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getfeaturevariable)
+  - [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getactivefeatures)
+  - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getfeaturevariationvariables)
+* A new version of the [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#isfeatureactive) method now includes an optional `track` parameter, which controls whether the assigned variation is tracked (default: `true`).
+### Bug Fixes
+* Fixed incorrect values for **NUMBER** feature variables of types **double** and **long**.
+
 ## 4.3.0 - 2024-09-05
 ### Features
 * Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#logging):
