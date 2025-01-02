@@ -32,8 +32,8 @@ All notable changes to this project will be documented in this file.
         - `DEBUG`
     - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#custom-handling-of-logs) implementations.
 * Enhanced tracking to consolidate multiple requests into a single one, combining visitor information and sending it once per interval.
-* Added a new variation of the [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush) with `instant` parameter. If the parameter's value is `true` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with the next tracking interval. Default value of the parameter is `false`.
-* Added new configuration parameter `trackingIntervalMillisecond` (`tracking_interval_millisecond`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/java-sdk.html#initialize-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
+* Added a new variation of the [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#flush) with `instant` parameter. If the parameter's value is `true` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with the next tracking interval. Default value of the parameter is `false`.
+* Added new configuration parameter `trackingIntervalMillisecond` (`tracking_interval_millisecond`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/android-sdk.html#initialize-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/android-sdk.html#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
 
 ## 4.2.3 - 2024-08-22
 ### Bug Fixes
@@ -180,8 +180,8 @@ All notable changes to this project will be documented in this file.
 * Added new conditions for targeting:
     - Visitor Code
     - SDK Language
-    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/go-sdk/#device)
-    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/go-sdk/#trackconversion)
+    - [Device](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#device)
+    - [Conversion](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#trackconversion)
 
 ## 3.1.2 - 2023-07-04
 * Improved the handling of internet connection loss for the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming): We have resolved a critical issue related to the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming). Previously, when the user’s device lost internet connection, the SDK was unable to receive configuration data until the next application launch. With this update, the SDK can now successfully retrieve the required configuration data once the connection is restored without restarting the application.\
@@ -195,7 +195,7 @@ The user must grant your application the `android.permission.ACCESS_NETWORK_STAT
 ## 3.1.0 - 2023-05-02
 * Added possibility for [`CustomData`](https://developers.kameleoon.com/android-sdk.html#customdata) to use variable argument list of values
 * Renaming of method:
-      - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData)
+      - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/android-sdk.html#getRemoteData)
 * Removed `UserAgent` data type
 
 ## 3.0.0 - 2023-02-17
@@ -248,7 +248,7 @@ The user must grant your application the `android.permission.ACCESS_NETWORK_STAT
 
 ## 2.0.10 - 2021-10-25 `[Deprecated]`
 * Added scheduling functionality for [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature)
-* Fixed wrong bucketing on respool time. Related to [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature) and [`triggerExperiment`](https://developers.kameleoon.com/swift-sdk.html#triggerexperiment)
+* Fixed wrong bucketing on respool time. Related to [`activateFeature`](https://developers.kameleoon.com/android-sdk.html#activatefeature) and [`triggerExperiment`](https://developers.kameleoon.com/android-sdk.html#triggerexperiment)
 
 ## 2.0.9 `[Deprecated]`
 * obtainFeatureVariable support JSONArray as returning value
