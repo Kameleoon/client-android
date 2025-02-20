@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.8.0 - 2025-02-20
+### Features
+* Added suspended versions of methods (using Kotlin coroutines) as an addition to callback-based implementations, enabling easier invocation and error handling:
+    - [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#runwhenready)
+    - [`getRemoteData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotedata)
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata)
+    - [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getvisitorwarehouseaudience)
+* The `get()` method of the `Result` class is deprecated. Using `getOrThrow()` is recommended instead. The logic remains the same, but the method name has been changed to explicitly indicate that it can throw an exception.
+
 ## 4.7.0 - 2025-02-10
 ### Features
 * Added SDK support for **holdout experiments**. Visitors assigned to a holdout experiment are excluded from all other rollouts and experiments, and consistently receive the default variation. For visitors not in a holdout experiment, the standard evaluation process applies, allowing them to be evaluated for all feature flags as usual. Platform-wide release expected in February 2025.
