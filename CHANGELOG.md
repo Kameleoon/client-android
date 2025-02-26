@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.9.0 - 2025-02-26
+### Features
+* Added SDK support for **Mutually Exclusive Groups**. When feature flags are grouped into a **Mutually Exclusive Group**, only one flag in the group will be evaluated at a time. All other flags in the group will automatically return their default variation.
+* Added new configuration parameter `networkDomain` (`network_domain`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) and the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) file. This parameter allows specifying a custom domain for all outgoing network requests.
+
 ## 4.8.0 - 2025-02-20
 ### Features
 * Added suspended versions of methods (using Kotlin coroutines) as an addition to callback-based implementations, enabling easier invocation and error handling:
