@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.11.1 - 2025-03-26
+### Bug fixes
+* Fixed an issue where compressed conversions (introduced in [v4.6.0](#460)) could be incorrectly sent again, potentially affecting the `revenue` value for a goal. 
+* The value of the `revenue` parameter was not accounted for in some overloads of the [`trackConversion`][trackConversion] method.
+
 ## 4.11.0 - 2025-03-24
 ### Features
 * Added new optional parameters `negative` and `metadata` to the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion) method.
