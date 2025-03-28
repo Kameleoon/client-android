@@ -8,21 +8,21 @@ All notable changes to this project will be documented in this file.
 * Fixed an issue where compressed conversions (introduced in [v4.6.0](https://github.com/Kameleoon/client-android/blob/main/CHANGELOG.md#460---2025-01-17)) could be incorrectly sent again, potentially affecting the `revenue` value for a goal.
 * The value of the `revenue` parameter was not accounted for in some overloads of the [`trackConversion`][trackConversion] method.
 
-## 4.11.0 - 2025-03-24
+## 4.11.0 - 2025-03-24 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added new optional parameters `negative` and `metadata` to the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion) method.
 * Added new optional parameter `metadata` to the [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#conversion) data constructor.
 
-## 4.10.0 - 2025-03-18
+## 4.10.0 - 2025-03-18 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added support for Contextual Bandit evaluations. Calling [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata) with the `cbs=true` flag is required for this feature to function correctly. Platform-wide release expected in March 2025.
 
-## 4.9.0 - 2025-02-26
+## 4.9.0 - 2025-02-26 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added SDK support for **Mutually Exclusive Groups**. When feature flags are grouped into a **Mutually Exclusive Group**, only one flag in the group will be evaluated at a time. All other flags in the group will automatically return their default variation.
 * Added new configuration parameter `networkDomain` (`network_domain`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) and the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#create) file. This parameter allows specifying a custom domain for all outgoing network requests.
 
-## 4.8.0 - 2025-02-20
+## 4.8.0 - 2025-02-20 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added suspended versions of methods (using Kotlin coroutines) as an addition to callback-based implementations, enabling easier invocation and error handling:
     - [`runWhenReady`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#runwhenready)
@@ -31,11 +31,11 @@ All notable changes to this project will be documented in this file.
     - [`getVisitorWarehouseAudience`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getvisitorwarehouseaudience)
 * The `get()` method of the `Result` class is deprecated. Using `getOrThrow()` is recommended instead. The logic remains the same, but the method name has been changed to explicitly indicate that it can throw an exception.
 
-## 4.7.0 - 2025-02-10
+## 4.7.0 - 2025-02-10 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added SDK support for **holdout experiments**. Visitors assigned to a holdout experiment are excluded from all other rollouts and experiments, and consistently receive the default variation. For visitors not in a holdout experiment, the standard evaluation process applies, allowing them to be evaluated for all feature flags as usual. Platform-wide release expected in February 2025.
 
-## 4.6.0 - 2025-01-17
+## 4.6.0 - 2025-01-17 [`[Critical Issue: Update to 4.11.1]`](#4111---2025-03-26)
 ### Features
 * Added the [`setForcedVariation()`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#setforcedvariation) method. This method allows explicitly setting a forced variation for a visitor, which will be applied during experiment evaluation.
 * Compression has been added to the [Conversions](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#conversion) list, preventing its unchecked growth and improving the speed of visitor synchronization with local storage.
