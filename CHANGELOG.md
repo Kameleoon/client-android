@@ -1,6 +1,13 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.12.0 - 2025-04-02
+### Features
+* Added support for new conditions:
+    - Exclusive Campaign
+    - Experiment
+    - Personalization
+
 All notable changes to this project will be documented in this file.
 
 ## 4.11.1 - 2025-03-26
