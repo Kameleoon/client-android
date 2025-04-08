@@ -1,6 +1,10 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.12.1 - 2025-04-08
+### Bug Fixes
+* Changed the order in which **conversion** and **experiment** events are sent. This may lead to more accurate **visit**-level experiment reporting.
+
 ## 4.12.0 - 2025-04-02
 ### Features
 * Added support for new conditions:
