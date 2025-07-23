@@ -1,6 +1,10 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.16.0 - 2025-07-23
+### Features
+* Added the [`evaluateAudiences`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#evaluateaudiences) method. This method iterates over all Audiences Explorer segments, evaluates each one, and tracks the segments for which the visitor is targeted using the [`TARGETINGSEGMENT`](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/) event.
+
 ## 4.15.0 - 2025-07-10
 ### Features
 * Introducing a fallback configuration mechanism via the [`default_datafile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#additional-configuration) parameter. If no cached configuration is available, the SDK immediately uses the provided default. For version control, the SDK prioritizes the default configuration if its `dateModified` timestamp is more recent than the cached version.
