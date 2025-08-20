@@ -1,6 +1,11 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.18.0 - 2025-08-20
+### Features
+* Added a new property **`environmentEnabled`** to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#featureflag), indicating whether the feature flag is enabled in the current environment.
+* Added a new property **`name`** to [`Variation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#variation), representing the name of the variation.  
+
 ## 4.17.0 - 2025-08-13
 ### Features
 * Introduced the new [`getDataFile`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getdatafile) method. This method returns the current SDK configuration (also known as the **data file**) used for evaluation and targeting. It is **not** intended for production use to fetch variations for every feature flag in the returned list, as it is not optimized for performance. For that purpose, use [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#getvariations) instead. `getDataFile` is mainly useful for debugging or QA, for example to let internal users manually select a variant for a specific feature flag in production.
