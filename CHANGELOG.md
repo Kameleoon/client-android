@@ -1,6 +1,11 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.19.0 - 2025-08-29
+### Features
+* Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#customdata), used as the `overwrite` parameter during tracking.
+* [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#customdata) can now be created using a `name`, in addition to the existing method of using an `index`.
+
 ## 4.18.0 - 2025-08-20
 ### Features
 * Added a new property **`environmentEnabled`** to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#featureflag), indicating whether the feature flag is enabled in the current environment.
