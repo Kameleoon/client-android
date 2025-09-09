@@ -1,6 +1,11 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.20.0 - 2025-09-09
+### Features
+* Added a new property `defaultVariationKey` and a method `getDefaultVariation()` to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#featureflag). The method returns information about the default variation associated with the feature flag.
+* Added a new property `rules` of type [`List<Rule>`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#rule) to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#featureflag), which defines the targeting rules associated with the feature flag.
+
 ## 4.19.0 - 2025-08-29
 ### Features
 * Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#customdata), used as the `overwrite` parameter during tracking.
