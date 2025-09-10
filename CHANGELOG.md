@@ -1,6 +1,10 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.20.1 - 2025-09-10
+### Bug Fixes
+* Fixed an issue which caused race conditions in the `VisitorVisits` internal type and sometimes crashes in SDK's internal background processes. Affected versions: 4.13.0 - 4.20.0.
+
 ## 4.20.0 - 2025-09-09
 ### Features
 * Added a new property `defaultVariationKey` and a method `getDefaultVariation()` to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#featureflag). The method returns information about the default variation associated with the feature flag.
