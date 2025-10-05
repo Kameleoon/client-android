@@ -1,6 +1,8 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+All notable changes to this project will be documented in this file.
+
 ## 4.20.1 - 2025-09-10
 ### Bug Fixes
 * Fixed an issue which caused race conditions in the `VisitorVisits` internal type and sometimes crashes in SDK's internal background processes. Affected versions: 4.13.0 - 4.20.0.
@@ -18,7 +20,7 @@
 ## 4.18.0 - 2025-08-20
 ### Features
 * Added a new property **`environmentEnabled`** to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#featureflag), indicating whether the feature flag is enabled in the current environment.
-* Added a new property **`name`** to [`Variation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#variation), representing the name of the variation.  
+* Added a new property **`name`** to [`Variation`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk/#variation), representing the name of the variation.
 
 ## 4.17.0 - 2025-08-13
 ### Features
@@ -52,8 +54,6 @@
     - Exclusive Campaign
     - Experiment
     - Personalization
-
-All notable changes to this project will be documented in this file.
 
 ## 4.11.1 - 2025-03-26
 ### Bug fixes
