@@ -1,6 +1,10 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
 
 # Changelog
+## 4.20.2 - 2025-10-24
+### Bug Fixes
+* Fixed an issue where [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#conversion)'s metadata initialized with a name was not tracked.
+
 All notable changes to this project will be documented in this file.
 
 ## 4.20.1 - 2025-09-10
