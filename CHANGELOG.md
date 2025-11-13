@@ -1,11 +1,10 @@
 [trackConversion]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#trackconversion
-
 # Changelog
+All notable changes to this project will be documented in this file.
+
 ## 4.20.3 - 2025-11-13
 ### Bug Fixes
 * Fixed an issue where the **SDK Type** condition returned an incorrect falsy result when the version was not set.
-
-All notable changes to this project will be documented in this file.
 
 ## 4.20.2 - 2025-10-24
 ### Bug Fixes
@@ -50,7 +49,7 @@ All notable changes to this project will be documented in this file.
 ### Features
 * Added support for **304 (Not Modified)** responses from the SDK config service to avoid redundant updates and reduce traffic when the configuration hasn't changed.
 * Added automatic detection of the [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#device) type for targeting and reporting purposes. However, it can still be manually overridden using the [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#addData) method.
-* Added support for a **New**/**Returning** visitor breakdown filter in reports (requires calling [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/android-sdk#getremotevisitordata)).
+* Added support for a **New**/**Returning** visitor breakdown filter in reports.
 
 ## 4.12.1 - 2025-04-08
 ### Bug Fixes
