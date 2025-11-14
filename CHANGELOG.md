@@ -2,7 +2,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 4.20.3 - 2025-11-13
+## 4.20.3 - 2025-11-03
 ### Bug Fixes
 * Fixed an issue where the **SDK Type** condition returned an incorrect falsy result when the version was not set.
 
